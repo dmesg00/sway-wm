@@ -317,9 +317,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 # Start swaybar to display a workspace bar
 bar {
   position top
-  #status_command ~/.config/sway/scripts/status_bar.sh
+  status_command ~/.config/sway/scripts/status_bar.sh
   strip_workspace_numbers no
-  swaybar_command waybar
+  #swaybar_command waybar
   workspace_buttons yes
   tray_output HDMI-A-1
   colors {
