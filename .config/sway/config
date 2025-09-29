@@ -262,7 +262,7 @@ for_window [app_id="org.twosheds.iwgtk"] floating enable
 for_window [app_id="iwgtk"] floating enable
 
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r exec ~/.config/sway/reload.sh
 # exit sway (logs you out of your session)
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit Sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'"
 
