@@ -15,13 +15,21 @@ nwgWrapperRestart="${HOME}/.config/sway/nwg-wrapper-conky.sh"
 # Function for sleep monitors
 function sleepMonitors() {
   #swaylock --color 000000 -f
-  swaymsg "output * dpms off"
+  #swaymsg "output * dpms off" # Fail with new Sway version
+  list_monitors=$(wlr-randr | awk '/^[A-Z]+-/ {print $1}')
+  for detected_monitor in ${list_monitors} ; do
+    swaymsg "output ${detected_monitor} dpms off"
+  done
   echo "sleep" > ${stateFile}
 }
 
 # Function for resume monitors
 function resumeMonitors() {
-  swaymsg "output * dpms on"
+  # swaymsg "output * dpms on"
+  list_monitors=$(wlr-randr | awk '/^[A-Z]+-/ {print $1}')
+  for detected_monitor in ${list_monitors} ; do
+    swaymsg "output ${detected_monitor} dpms on"
+  done
   # Load monitors config quickly
   #bash ${LoadConfigResume} screensaver
   echo "resume" > ${stateFile}
