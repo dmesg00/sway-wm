@@ -5,4 +5,4 @@ swaymsg reload
 
 # Load screen configuration
 sleep 1
-~/.config/sway/startwlrrandr.sh
+~/.config/sway/startwlrrandr.sh screensaver
