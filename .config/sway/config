@@ -245,6 +245,7 @@ for_window [app_id="ristretto" ] floating enable
 for_window [app_id="Image Viewer" ] floating enable
 for_window [class="Mozilla VPN" instance="mozillavpn"] floating enable
 for_window [class="Lxappearance" instance="lxappearance"] floating enable
+for_window [class="ffplay" instance="ffplay"] floating enable
 for_window [app_id="wdisplays" ] floating enable
 for_window [app_id="zenity"] floating enable
 for_window [title="Caffeine.py"] floating enable
