@@ -118,7 +118,7 @@ fi
 
 create_list_files
 list_output=$(list_desktop_icons | wofi -s ~/.config/wofi/wofi.css --dmenu -i -p "󰈞  drun")
-run_output=$(echo ${list_output} | cut -c 6-999)
+run_output=$(echo ${list_output} | cut -c 3-999)
 echo "${run_output}"
 if [[ ! -z "${run_output}" ]] ; then
   if [[ "${run_output}" == "Scan New Desktop Files" ]] ; then
